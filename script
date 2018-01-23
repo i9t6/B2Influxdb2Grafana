@@ -1,0 +1,5 @@
+#!/bin/env bash
+while [ true ]; do
+ sleep 20
+ /home/paco/bitso/bitso.py
+done
