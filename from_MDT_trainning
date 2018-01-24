@@ -6,6 +6,7 @@ SELECT "total-cpu-five-minute" FROM "Cisco-IOS-XR-wdsysmon-fd-oper:system-monito
 
 
 docker run -d -p 8086:8086 -v ~/influxdb:/var/lib/influxdb influxdb
+docker exec -it f51f30b94f89 influx
 
 curl -XPOST 'http://172.16.1.100:8086/query' --data-urlencode "q=CREATE DATABASE test_db"
 
