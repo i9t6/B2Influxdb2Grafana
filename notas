@@ -1,0 +1,13 @@
+Run sudo apt-get install python-virtualenv
+
+virtualenv myenv (this creates a new virtual environment. You can freely install packages in here without polluting your system-wide Python libraries. It will add (myenv) to your prompt.)
+
+source myenv/bin/activate (this activates your environment; making sure your shell is pointing to the right place for Python)
+
+pip install _____ (replace __ with whatever you want to install)
+
+Once you are done type deactivate to reset your shell and environment to the default system Python.
+
+source ./elprimero/bin/activate
+
+ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 123.123.123.123
