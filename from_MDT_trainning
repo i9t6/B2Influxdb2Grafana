@@ -1,0 +1,16 @@
+
+curl -XPOST 'http://127.0.0.1:8086/query' --data-urlencode "q=CREATE DATABASE mdt_db" {"results":[{"statement_id":0}]}
+
+SELECT "total-cpu-five-minute" FROM "Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization" name: Cisco-IOS-XR-wdsysmon-fd-oper:system-monitoring/cpu-utilization
+
+
+
+docker run -d -p 8086:8086 -v ~/influxdb:/var/lib/influxdb influxdb
+
+curl -XPOST 'http://172.16.1.100:8086/query' --data-urlencode "q=CREATE DATABASE test_db"
+
+
+docker run -d -p 3000:3000 grafana/grafana
+docker run -d -e INFLUX_IP=172.16.1.100 -p 5432:5432 -v ~/dumpdir:/dumpdir brynpounds/pipeline
+
+docker run -d -e INFLUX_IP=172.16.1.100 -p 5432:5432  brynpounds/pipeline
